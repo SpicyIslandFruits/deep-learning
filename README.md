@@ -14,6 +14,6 @@ docker run -it -p 8888:8888 tensorflow/tensorflow:nightly-py3-jupyter
 docker pull tensorflow/tensorflow:latest-gpu-jupyter
 sudo pacman -S nvidia
 yay -S nvidia-docker
-docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
+docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi // test gpu
 docker run --runtime=nvidia -it -p 8888:8888 tensorflow/tensorflow:nightly-py3-jupyter
 ```
