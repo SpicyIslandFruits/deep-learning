@@ -2,6 +2,10 @@
 ```bash
 sudo pacman -S docker docker-compose
 docker pull tensorflow/tensorflow:latest-gpu-jupyter
+```
+
+## cpu only
+```bash
 docker run -it -p 8888:8888 tensorflow/tensorflow:nightly-py3-jupyter
 ```
 
