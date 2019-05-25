@@ -1,12 +1,14 @@
 # Setup Deep Learning environment
 ```bash
 sudo pacman -S docker docker-compose
-yay -S nvidia-docker
 docker pull tensorflow/tensorflow:latest-gpu-jupyter
+docker run -it -p 8888:8888 tensorflow/tensorflow:nightly-py3-jupyter
 ```
 
 ## with gpu support
 ```bash
+sudo pacman -S nvidia
+yay -S nvidia-docker
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 docker run --runtime=nvidia -it -p 8888:8888 tensorflow/tensorflow:nightly-py3-jupyter
 ```
